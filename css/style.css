@@ -1,0 +1,268 @@
+body {
+  background-color: #48578f;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  font-family: sans-serif;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 150px 0 0 0;
+}
+
+.content {
+  text-align: center;
+  display: block;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 25px 10px #ffc400;
+          box-shadow: 0 0 25px 10px #ffc400;
+}
+
+.title {
+  font-size: 30px;
+  margin: 0 0 20px 0;
+  color: #ffffff;
+}
+
+.add-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.message {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80%;
+          flex: 0 0 80%;
+  max-width: 520px;
+  min-height: 30px;
+  padding: 5px 10px 5px 30px;
+  font-size: 18px;
+  font-style: italic;
+  border-radius: 10px;
+  border: none;
+}
+
+.message:focus-visible {
+  outline: none;
+  -webkit-box-shadow: 0 0 5px 5px #ffc400;
+          box-shadow: 0 0 5px 5px #ffc400;
+}
+
+.add-button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 12%;
+          flex: 0 0 12%;
+  border-radius: 10px;
+  padding: 5px;
+  min-height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  color: #20a100;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #fff;
+  z-index: 50;
+}
+
+.add-button:hover {
+  -webkit-box-shadow: 0 0 5px 5px #197d00;
+          box-shadow: 0 0 5px 5px #197d00;
+}
+
+.add-button:active {
+  color: #000;
+  -webkit-box-shadow: 0 0 5px 5px #27c500;
+          box-shadow: 0 0 5px 5px #27c500;
+  background-color: #197d00;
+}
+
+.button-remove-item {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 78px;
+  height: 40px;
+  right: -90px;
+  font-size: 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  color: #ffffff;
+  background-color: #a80000;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.button-remove-item:hover {
+  background-color: #750000;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list_wrapper {
+  margin: 0 0 20px 0;
+}
+
+.list li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 80%;
+  min-height: 30px;
+  margin: 0 0 15px 0;
+  padding: 5px 10px 5px 30px;
+  font-size: 18px;
+  vertical-align: middle;
+  text-align: left;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.list li:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 5px 5px #ffc400;
+          box-shadow: 0 0 5px 5px #ffc400;
+}
+
+.list li:first-child .button-up, .list li:first-child .button-down {
+  display: none;
+}
+
+.button-up, .button-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: normal;
+  text-align: center;
+  color: #000;
+  background-color: #ffc400;
+  border: none;
+  border-bottom: 1px silid #000;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.button-up:hover, .button-down:hover {
+  background-color: #cc9d00;
+}
+
+.button-up:active, .button-down:active {
+  outline: none;
+  background-color: #000000;
+  color: #ffc400;
+}
+
+.button-up {
+  top: 0;
+  border-radius: 0 10px 0 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  border-bottom: 1px silid #000;
+}
+
+.button-down {
+  bottom: 0;
+  border-radius: 0 0 10px 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  border-right: 1px silid #000;
+}
+
+.button-add-sublist, .button-remove-sublist {
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  color: #e7e7e7;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0 10px 10px 0;
+}
+
+.button-add-sublist {
+  background-color: #20a100;
+}
+
+.button-add-sublist:hover {
+  background-color: #166e00;
+}
+
+.button-remove-sublist {
+  display: none;
+  background-color: #ff0000;
+}
+
+.button-remove-sublist:hover {
+  background-color: #cc0000;
+}
+/*# sourceMappingURL=style.css.map */
