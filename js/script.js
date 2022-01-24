@@ -24,11 +24,12 @@
       
       }
       else {
-      addMessage.value = '';
-      items.push(newItem);
-      displayMessages();
-      localStorage.setItem('list', JSON.stringify(items));
+        addMessage.value = '';
+        items.push(newItem);
+        displayMessages();
+        localStorage.setItem('list', JSON.stringify(items));
       }
+      deleteElements();      
     });
 
     function displayMessages(){         
@@ -50,10 +51,12 @@
     console.log(items);
 
 
-    document.querySelectorAll('.button-remove-item').forEach((btn, i) => {
+    function deleteElements() {
+      document.querySelectorAll('.button-remove-item').forEach((btn, i) => {
         btn.addEventListener('click', () => {    
           console.log("click del btn");   
           btn.parentElement.remove();
-
         });
-  });
+      });
+    }
+    deleteElements();
