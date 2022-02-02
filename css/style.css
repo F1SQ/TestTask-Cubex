@@ -156,9 +156,9 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 80%;
   min-height: 30px;
   margin: 0 0 15px 0;
@@ -178,6 +178,12 @@ button {
 
 .list li:first-child .button-up, .list li:first-child .button-down {
   display: none;
+}
+
+.list li input {
+  width: 35%;
+  padding: 5px 70px 5px 5px;
+  border-radius: 10px;
 }
 
 .button-up, .button-down {
